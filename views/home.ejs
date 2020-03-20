@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100% !important;
+  background: yellow;
+}
+</style>
+  </head>
+  <body>
+
+
+    <div class="carousel carousel-slider center full-height" >
+    <div class="carousel-fixed-item left-indicators right">
+      <a href="/helplines"><button class="btn red wave-effect"><i class="material-icons left">airline_seat_flat</i>HELPLINE!</button></a>
+    </div>
+
+    <div class="carousel-item amber white-text" href="#one!">
+      <h1><%= parseData.cases %></h1>
+
+      <p class="white-text">CASES FOUND!</p>
+
+      <lottie-player
+    src="https://assets6.lottiefiles.com/private_files/lf30_hHODoj.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
+</lottie-player>
+    </div>
+    <div class="carousel-item green white-text" href="#two!">
+      <h1><%= parseData.recovered %></h1>
+      <p class="white-text">CASES RECOVERED</p>
+      <lottie-player
+    src="https://assets9.lottiefiles.com/packages/lf20_wdXBRc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
+    </div>
+    <div class="carousel-item red white-text" href="#three!">
+      <h1><%= parseData.deaths %></h1>
+      <p class="white-text">PEOPLE DEAD</p>
+      <lottie-player
+    src="https://assets2.lottiefiles.com/packages/lf20_EXpKKd.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
+</lottie-player>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h1><%= parseData2.cases %></h1>
+      <p class="white-text">CASES</p>
+      <h1><%= parseData2.deaths %></h1>
+      <p class="white-text">Deaths</p>
+      <h1><%= parseData2.recovered %></h1>
+      <p class="white-text">RECOVERED</p>
+    </div>
+    </div>
+
+
+
+    <div class="loader-wrapper">
+      <lottie-player
+      src="https://assets4.lottiefiles.com/datafiles/dNJ1QgOiCpNbFKD/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay >
+  </lottie-player>
+     </div>
+
+     <div class="fixed-action-btn">
+             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">near_me</i></a>
+             <ul>
+                      <li><a href="/about" class="btn-floating blue btn-large"><i class="large material-icons">face</i></a></li>
+               <li><a href="/sources" class="btn-floating yellow btn-large"><i class="large material-icons">done</i></a></li>
+               <li><a href="/helplines" class="btn-floating yellow btn-large"><i class="large material-icons">add</i></a></li>
+
+
+             </ul>
+           </div>
+
+
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+     <script type="text/javascript">
+       $(window).on("load",function(){
+       $(".loader-wrapper").fadeOut("slow");
+        });
+     </script>
+     <script type="text/javascript">
+         $('.carousel.carousel-slider').carousel({
+               fullWidth: true,
+               indicators: true
+         });
+     </script>
+  </body>
+</html>
